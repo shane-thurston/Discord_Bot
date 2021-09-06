@@ -33,3 +33,15 @@ if msg.startswith('$delete'):
       await message.channel.send("Message deleted.")
     else:
       await message.channel.send("Sorry couldn't delete that.")
+
+#Textblob code for checking sentiment analysis
+from textblob import TextBlob
+
+#check the msg entered by the user.
+blob = TextBlob(msg)
+pol = blob.polarity
+#polarity lies between -1 and 1 where 1 means positive and -1 means negative
+if pol < 0:
+  await message.channel.send('That was a negative comment! Are you ok?')
+else:
+  await message.channel.send('That was a positive thing to say. You must be feeling good.')
