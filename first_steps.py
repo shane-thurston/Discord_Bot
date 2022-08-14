@@ -1,3 +1,6 @@
+#new import statement
+import random
+
 #underneath the new Discord instance
 sad_words = [
   "sad", 
