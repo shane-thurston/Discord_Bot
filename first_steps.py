@@ -25,3 +25,6 @@ if msg.startswith('$hello'):
     
 if any(word in msg for word in harm_words):
     await message.author.send("Suicide website link")
+    
+if msg in bullying:
+    await message.delete()
